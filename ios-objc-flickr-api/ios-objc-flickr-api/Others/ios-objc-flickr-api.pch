@@ -1,0 +1,30 @@
+//
+//  ios-objc-flickr-api.pch
+//  ios-objc-flickr-api
+//
+//  Created by OkuderaYuki on 2017/10/17.
+//  Copyright © 2017年 OkuderaYuki. All rights reserved.
+//
+
+#ifndef ios_objc_flickr_api_pch
+#define ios_objc_flickr_api_pch
+
+#pragma mark - UIKit Categories
+
+#import "UIViewController+Alert.h"
+#import "UICollectionViewCell+Identifier.h"
+#import "UIScrollView+Helper.h"
+
+#pragma mark - Foundation Categories
+
+#import "NSString+Localized.h"
+
+#pragma mark - DEBUG LOG
+// デバッグビルドの場合のみコンソールに出力するログ
+#if DEBUG
+#define DLOG(fmt, ...) NSLog((@"%s [Line: %d] "fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define DLOG(fmt, ...)
+#endif
+
+#endif /* ios_objc_flickr_api_pch */
